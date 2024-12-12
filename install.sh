@@ -39,14 +39,14 @@ cd ${EXTRACT_PATH}
 
 echo -e "[INSTALL][EXTRACT] Extracting Maya's RPM..."
 
-for rpm in `ls ${EXTRACT_PATH}/Maya*.rpm`;
+for rpm in `ls ${EXTRACT_PATH}/Packages/Maya*.rpm`;
 do
     rpm2cpio ${rpm} | cpio -idm;
 done
 
 echo -e "[INSTALL][EXTRACT] Extracting ADLM's RPM..."
 
-for rpm in `ls ${EXTRACT_PATH}/adlmapps*.rpm`;
+for rpm in `ls ${EXTRACT_PATH}/Packages/adlmapps*.rpm`;
 do
     rpm2cpio ${rpm} | cpio -idm;
 done

@@ -21,15 +21,15 @@ endif()
 
 # We check if we have the correct license information. If not, we abort the build process.
 string(COMPARE EQUAL "$ENV{AUTODESK_LICENSE_SERVER}" "" NO_AUTODESK_LICENSE_SERVER)
-string(COMPARE EQUAL "$ENV{MAYA_SERIAL_NUMBER}" "" NO_MAYA_SERIAL_NUMBER)
+# string(COMPARE EQUAL "$ENV{MAYA_SERIAL_NUMBER}" "" NO_MAYA_SERIAL_NUMBER)
 
-if (${NO_AUTODESK_LICENSE_SERVER} OR ${NO_MAYA_SERIAL_NUMBER})
-    message(FATAL_ERROR
-        "The AUTODESK_LICENSE_SERVER and/or MAYA_SERIAL_NUMBER environment variables are not properly setup, "
-        "thus we miss some license information to properly setup Maya. Aborting the build process...")
+# if (${NO_AUTODESK_LICENSE_SERVER} OR ${NO_MAYA_SERIAL_NUMBER})
+#     message(FATAL_ERROR
+#         "The AUTODESK_LICENSE_SERVER and/or MAYA_SERIAL_NUMBER environment variables are not properly setup, "
+#         "thus we miss some license information to properly setup Maya. Aborting the build process...")
 
-    return()
-endif()
+#     return()
+# endif()
 
 # We setup the local variables related to the license information.
 set(AUTODESK_LICENSE_SERVER $ENV{AUTODESK_LICENSE_SERVER})
